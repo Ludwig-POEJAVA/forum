@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
 <taglib>
 	<tlib-version>1.0</tlib-version>
 	<jsp-version>2.0</jsp-version>
@@ -7,7 +9,7 @@
 		<tag-class>fr.acceis.forum.tag.ThreadFromList</tag-class>
 		<body-content>empty</body-content>
 		<attribute>
-			<name>message</name>
+			<name>titre</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
@@ -18,11 +20,6 @@
 		</attribute>
 		<attribute>
 			<name>date</name>
-			<required>true</required>
-			<rtexprvalue>true</rtexprvalue>
-		</attribute>
-		<attribute>
-			<name>views</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>

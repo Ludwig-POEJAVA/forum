@@ -20,7 +20,7 @@
 			<table cellspacing="1" width="100%">
 				<tbody>
 					<tr>
-						<td align="left" valign="middle"><img alt="Post new topic" src="fichiers/button_topic_new.gif" title="Post new topic"></td>
+						<%@include file="/WEB-INF/jspf/creerTopic.jspf" %>
 					</tr>
 				</tbody>
 			</table><br clear="all">
@@ -44,62 +44,7 @@
 						<th>&nbsp;R&eacute;ponses&nbsp;</th>
 						<th>&nbsp;Vues&nbsp;</th>
 					</tr>
-					<tr>
-						<td class="row1">
-							<a class="topictitle" href="#">Mon fil de discussion</a>
-						</td>
-						<td align="center" class="row2" width="130">
-							<p class="topicauthor"><a class="username-coloured" href="#">Yves</a></p>
-						</td>
-						<td align="center" class="row1" width="50">
-							<p class="topicdetails">10</p>
-						</td>
-						<td align="center" class="row2" width="50">
-							<p class="topicdetails">1234</p>
-						</td>
-					</tr>
-					<tr>
-						<td class="row1">
-							<a class="topictitle" href="#">Mon fil de discussion</a>
-						</td>
-						<td align="center" class="row2" width="130">
-							<p class="topicauthor"><a class="username-coloured" href="#">Yves</a></p>
-						</td>
-						<td align="center" class="row1" width="50">
-							<p class="topicdetails">10</p>
-						</td>
-						<td align="center" class="row2" width="50">
-							<p class="topicdetails">1234</p>
-						</td>
-					</tr>
-					<tr>
-						<td class="row1">
-							<a class="topictitle" href="#">Mon fil de discussion</a>
-						</td>
-						<td align="center" class="row2" width="130">
-							<p class="topicauthor"><a class="username-coloured" href="#">Yves</a></p>
-						</td>
-						<td align="center" class="row1" width="50">
-							<p class="topicdetails">10</p>
-						</td>
-						<td align="center" class="row2" width="50">
-							<p class="topicdetails">1234</p>
-						</td>
-					</tr>
-					<tr>
-						<td class="row1">
-							<a class="topictitle" href="#">Mon fil de discussion</a>
-						</td>
-						<td align="center" class="row2" width="130">
-							<p class="topicauthor"><a class="username-coloured" href="#">Yves</a></p>
-						</td>
-						<td align="center" class="row1" width="50">
-							<p class="topicdetails">10</p>
-						</td>
-						<td align="center" class="row2" width="50">
-							<p class="topicdetails">1234</p>
-						</td>
-					</tr>
+					
 				</tbody>
 			</table><br clear="all">
 		</div>
