@@ -7,20 +7,42 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class ThreadFromList extends SimpleTagSupport
 {
-	private String message;
+	private Object thread;
 
-	public void setMessage(String message)
+	public void setMessage(Object thread)
 	{
-		this.message = message;
+		this.thread = thread;
 	}
 
 	@Override
 	public void doTag() throws IOException
 	{
 		JspWriter out = this.getJspContext().getOut();
-		if (this.message != null)
+		if (this.thread != null)
 		{
-			out.println("<table class=\"tablebg\" cellpadding=\"0\" width=\"100%\">\n" + "<tbody>\n" + "<tr>\n" + "<td class=\"row1\"><p class=\"breadcrumbs\">" + this.message + "</p></td>\n" + "</tr>\n" + "</tbody>\n" + "</table>\n" + "clear=\"all\" />\n");
+
+			//temporaire
+			String titre = "Mon fil de discussion";
+			int vues = 1234;
+			int reponses = 10;
+			String auteur = "Yves";
+			String s = "";
+
+			s += "\t\t\t\t\t<tr>";
+			s += "\t\t\t\t\t\t<td class=\"row1\">";
+			s += "\t\t\t\t\t\t\t<a class=\"topictitle\" href=\"" + "#thread.lien.vers." + titre + "\">" + titre + "</a>";
+			s += "\t\t\t\t\t\t</td>";
+			s += "\t\t\t\t\t\t<td align=\"center\" class=\"row2\" width=\"130\">";
+			s += "\t\t\t\t\t\t\t<p class=\"topicauthor\"><a class=\"username-coloured\" href=\"" + "#profil/id." + auteur + "\">" + auteur + "</a></p>";
+			s += "\t\t\t\t\t\t</td>";
+			s += "\t\t\t\t\t\t<td align=\"center\" class=\"row1\" width=\"50\">";
+			s += "\t\t\t\t\t\t\t<p class=\"topicdetails\">" + reponses + "</p>";
+			s += "\t\t\t\t\t\t</td>";
+			s += "\t\t\t\t\t\t<td align=\"center\" class=\"row2\" width=\"50\">";
+			s += "\t\t\t\t\t\t\t<p class=\"topicdetails\">" + vues + "</p>";
+			s += "\t\t\t\t\t\t</td>";
+			s += "\t\t\t\t\t</tr>";
+			out.println(s);
 		}
 	}
 }
