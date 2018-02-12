@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,21 +14,13 @@ public class Topic
 {
 	@Id
 	@GeneratedValue
-	private long	id;
-	private String	titre;
-	private Date	creation;
-	private long	author_id;
-
-	public Topic()
-	{
-	}
-
-	public Topic(String titre, Date creation, long author_id)
-	{
-		this.titre = titre;
-		this.creation = creation;
-		this.author_id = author_id;
-	}
+	private long		id;
+	private String		titre;
+	private Date		creationDate;
+	private long		reponses;
+	private long		vues;
+	@OneToOne
+	private Utilisateur	auteur;
 
 	public long getId()
 	{
@@ -49,24 +42,43 @@ public class Topic
 		this.titre = titre;
 	}
 
-	public Date getCreation()
+	public Date getCreationDate()
 	{
-		return this.creation;
+		return this.creationDate;
 	}
 
-	public void setCreation(Date creation)
+	public void setCreationDate(Date creationDate)
 	{
-		this.creation = creation;
+		this.creationDate = creationDate;
 	}
 
-	public long getAuthor_id()
+	public Utilisateur getAuteur()
 	{
-		return this.author_id;
+		return this.auteur;
 	}
 
-	public void setAuthor_id(long author_id)
+	public void setAuteur(Utilisateur auteur)
 	{
-		this.author_id = author_id;
+		this.auteur = auteur;
 	}
 
+	public long getReponses()
+	{
+		return this.reponses;
+	}
+
+	public void setReponses(long reponses)
+	{
+		this.reponses = reponses;
+	}
+
+	public long getVues()
+	{
+		return this.vues;
+	}
+
+	public void setVues(long vues)
+	{
+		this.vues = vues;
+	}
 }

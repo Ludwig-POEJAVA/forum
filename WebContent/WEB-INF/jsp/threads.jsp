@@ -44,7 +44,9 @@
 						<th>&nbsp;R&eacute;ponses&nbsp;</th>
 						<th>&nbsp;Vues&nbsp;</th>
 					</tr>
-					
+					<!--  topics -->
+					<%@include file="/WEB-INF/jspf/listTopics.jspf" %>
+					<!-- /topics -->
 				</tbody>
 			</table><br clear="all">
 		</div>

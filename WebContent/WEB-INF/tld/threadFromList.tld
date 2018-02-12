@@ -8,20 +8,30 @@
 		<name>threadFromList</name>
 		<tag-class>fr.acceis.forum.tag.ThreadFromList</tag-class>
 		<body-content>empty</body-content>
+		
 		<attribute>
 			<name>titre</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
+		
 		<attribute>
-			<name>author</name>
+			<name>auteur</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
+		
 		<attribute>
-			<name>date</name>
+			<name>reponses</name>
 			<required>true</required>
 			<rtexprvalue>true</rtexprvalue>
 		</attribute>
+		
+		<attribute>
+			<name>vues</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
 	</tag>
 </taglib>

@@ -1,0 +1,13 @@
+<%@ taglib uri ="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri ="/WEB-INF/tld/threadFromList.tld" prefix="custom" %>
+<%@ page import="fr.acceis.forum.model.Topic" %>
+<%@ page import="fr.acceis.forum.model.Utilisateur" %>
+
+<c:forEach items="${topics}" var="topic">
+	<custom:threadFromList
+		auteur = 	"${topic.getAuteur().getLogin()}"
+		titre = 	"${topic.getTitre()}"
+		reponses = 	"${topic.getReponses()}"
+		vues = 		"${topic.getVues()}"
+	/>
+</c:forEach>
