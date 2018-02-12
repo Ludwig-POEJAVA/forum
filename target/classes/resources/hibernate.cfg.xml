@@ -13,5 +13,6 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<mapping class="fr.acceis.forum.model.Utilisateur" />
 		<mapping class="fr.acceis.forum.model.Topic" />
+		<mapping class="fr.acceis.forum.model.Post" />
 	</session-factory>
 </hibernate-configuration>

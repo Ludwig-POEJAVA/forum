@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import fr.acceis.forum.hibernate.TopicHibernate;
 import fr.acceis.forum.model.Topic;
 
-public class AccueilServlet extends HttpServlet
+public class ViewTopicServlet extends HttpServlet
 {
 
 	private static final long serialVersionUID = 1L;
@@ -21,12 +21,21 @@ public class AccueilServlet extends HttpServlet
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
 	{
 
-		TopicHibernate topicHibernate = new TopicHibernate();
-		List<Topic> topics = topicHibernate.listerTopics();
+		//TopicHibernate topicHibernate = new TopicHibernate();
+		//List<Topic> topics = topicHibernate.listerTopics();
 
 		HttpSession session = req.getSession();
-		System.out.println("LISTER TOPICS OK : " + topics.size());
-		session.setAttribute("topics", topics);
+		System.out.println("VOIR TOPIC #" + 0);
+		String topic;
+		try
+		{
+			topic = req.getParameter("topic");
+		}
+		finally
+		{
+			//redirect to home;
+		}
+		//session.setAttribute("topics", topics);
 
 		req.getRequestDispatcher("/WEB-INF/jsp/threads.jsp").forward(req, resp);
 	}

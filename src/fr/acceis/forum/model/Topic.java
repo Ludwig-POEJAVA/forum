@@ -1,11 +1,13 @@
 package fr.acceis.forum.model;
 
+import java.util.Collection;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -14,13 +16,27 @@ public class Topic
 {
 	@Id
 	@GeneratedValue
-	private long		id;
-	private String		titre;
-	private Date		creationDate;
-	private long		reponses;
+	private long id;
+
+	private String titre;
+
+	private Date creationDate;
+
+	private long reponses;
+
 	private long		vues;
-	@OneToOne
+	@ManyToOne
 	private Utilisateur	auteur;
+
+	@OneToMany(mappedBy = "parent")
+	private Collection<Post> posts;
+
+	//
+	//
+	//
+	//
+	//
+	//
 
 	public long getId()
 	{
@@ -80,5 +96,15 @@ public class Topic
 	public void setVues(long vues)
 	{
 		this.vues = vues;
+	}
+
+	public Collection<Post> getPosts()
+	{
+		return this.posts;
+	}
+
+	public void setPosts(Collection<Post> posts)
+	{
+		this.posts = posts;
 	}
 }

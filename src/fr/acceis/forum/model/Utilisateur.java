@@ -11,13 +11,6 @@ import javax.persistence.Table;
 @Table(name = "Utilisateur")
 public class Utilisateur
 {
-	/*   PUBLIC.UTILISATEUR(
-		ID BIGINT NOT NULL PRIMARY KEY,
-		EMAIL VARCHAR(255),
-		INSCRIPTION TIMESTAMP,
-		LOGIN VARCHAR(255),
-		PASSWORD VARCHAR(255))
-		*/
 	@Id
 	@GeneratedValue
 	private long id;
@@ -29,6 +22,19 @@ public class Utilisateur
 	private String password;
 
 	private String email;
+
+	//@OneToMany
+	//private Collection<Post> posts;
+
+	//@OneToMany
+	//private Collection<Topic> topics;
+
+	//
+	//
+	//
+	//
+	//
+	//
 
 	public Utilisateur()
 	{
@@ -97,5 +103,25 @@ public class Utilisateur
 	{
 		return "Utilisateur " + this.getLogin() + ":" + this.getPassword() + " " + this.getEmail();
 	}
-
+	/*
+		public Collection<Post> getPosts()
+		{
+			return this.posts;
+		}
+	
+		public void setPosts(List<Post> posts)
+		{
+			this.posts = posts;
+		}
+	
+		public Collection<Topic> getTopics()
+		{
+			return this.topics;
+		}
+	
+		public void setTopics(List<Topic> topics)
+		{
+			this.topics = topics;
+		}
+	*/
 }

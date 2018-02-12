@@ -5,9 +5,9 @@
 
 <c:forEach items="${topics}" var="topic">
 	<custom:threadFromList
-		auteur = 	"${topic.getAuteur().getLogin()}"
-		titre = 	"${topic.getTitre()}"
-		reponses = 	"${topic.getReponses()}"
-		vues = 		"${topic.getVues()}"
+		auteur = 	"${topic.auteur.login}"
+		titre = 	"${topic.titre}"
+		reponses = 	"${topic.reponses}"
+		vues = 		"${topic.vues}"
 	/>
 </c:forEach>

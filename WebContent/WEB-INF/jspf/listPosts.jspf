@@ -1,0 +1,14 @@
+<%@ taglib 	uri ="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib 	uri ="/WEB-INF/tld/postsFromList.tld" prefix="custom" %>
+<%@ page 	import="fr.acceis.forum.model.Utilisateur" %>
+<%@ page 	import="fr.acceis.forum.model.Topic" %>
+<%@ page 	import="fr.acceis.forum.model.Post" 		%>
+
+<c:forEach items="${posts}" var="post">
+	<custom:postsFromList
+		auteur = 		"${post.auteur.login}"
+		topicTitre = 	"${post.topic.titre}"
+		datePostage = 	"${post.datePostage}"
+		message = 		"${post.vues}"
+	/>
+</c:forEach>

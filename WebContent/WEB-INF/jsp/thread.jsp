@@ -3,6 +3,7 @@
 <head>
 	<title>THREAD</title>
 	<meta charset="UTF-8">
+	<link href="file:/C:/Users/Formation/eclipse-workspace/forum/WebContent/fichiers/style.css" rel="stylesheet" type="text/css">
 	<link href="fichiers/style.css" rel="stylesheet" type="text/css">
 </head>
 <body class="ltr">
@@ -12,7 +13,7 @@
 				<tbody>
 					<tr>
 						<td class="row1">
-							<%@include file = "/WEB-INF/jspf/loginStatus.jspf" %>0
+							<%@include file = "/WEB-INF/jspf/loginStatus.jspf" %>
 						</td>
 					</tr>
 				</tbody>
@@ -24,58 +25,13 @@
 					</tr>
 				</tbody>
 			</table><br clear="all">
-			<table cellspacing="1" class="tablebg" width="100%">
-				<tbody>
-					<tr class="row2">
-						<td align="center" valign="middle"><b class="postauthor">Yves</b></td>
-						<td height="25" width="100%">
-							<table cellspacing="0" width="100%">
-								<tbody>
-									<tr>
-										<td class="gensmall" width="100%">
-											<div style="float: left;">
-												&nbsp; <b>Fil de discussion :</b> Mon fil de discussion
-											</div>
-											<div style="float: right;">
-												<b>Posted:</b> Wed Aug 17, 2016 2:12 pm&nbsp;
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</td>
-					</tr>
-				</tbody>
-				<tr class="row2">
-					<td class="profile" valign="top">
-						<table align="center" cellspacing="4" width="150"></table><span class="postdetails"><b>Posts:</b> 24</span>
-					</td>
-					<td valign="top">
-						<table cellspacing="5" width="100%">
-							<tbody>
-								<tr>
-									<td>
-										<div class="postbody">
-											Ceci est une r&eacute;ponse au fil de discussion
-										</div><br clear="all">
-										<br>
-										<table cellspacing="0" width="100%">
-											<tbody>
-												<tr valign="middle">
-													<td align="right" class="gensmall"></td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="fichiers/spacer.gif" width="1"></td>
-				</tr>
-			</table>
+			
+			<!--  posts -->
+			
+				<%@include file = "/WEB-INF/jspf/listPosts.jspf" %>
+			
+			<!-- /posts -->
+			
 		</div><br clear="all">
 		<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
 			<tbody>
