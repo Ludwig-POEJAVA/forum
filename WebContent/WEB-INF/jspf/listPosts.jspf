@@ -8,7 +8,7 @@
 	<custom:postsFromList
 		auteur = 		"${post.auteur.login}"
 		topicTitre = 	"${post.parent.titre}"
-		datePostage = 	"${post.dateCreation.toString()}"
-		message = 		"${post.vues}"
+		datePostage = 	"${post.dateCreation}"
+		message = 		"${post.message}"
 	/>
 </c:forEach>

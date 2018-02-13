@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import fr.acceis.forum.hibernate.PostHibernate;
-import fr.acceis.forum.hibernate.TopicHibernate;
 import fr.acceis.forum.model.Post;
-import fr.acceis.forum.model.Topic;
 
 public class ViewTopicServlet extends HttpServlet
 {

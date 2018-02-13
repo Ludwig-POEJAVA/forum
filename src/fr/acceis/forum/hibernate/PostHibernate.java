@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import org.hibernate.Session;
@@ -21,6 +22,9 @@ public class PostHibernate
 		CriteriaQuery<Post> query = criteriaBuilder.createQuery(Post.class);
 		Root<Post> root = query.from(Post.class);
 		query.select(root);
+
+		Predicate restrictionUtilisateur = criteriaBuilder.equal(root.get("parent"), topicId);
+		query.where(restrictionUtilisateur);
 
 		List<Post> posts = session.createQuery(query).getResultList();
 
