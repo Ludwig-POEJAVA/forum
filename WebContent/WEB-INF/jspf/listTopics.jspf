@@ -9,5 +9,6 @@
 		titre = 	"${topic.titre}"
 		reponses = 	"${topic.reponses}"
 		vues = 		"${topic.vues}"
+		topicId = 	"${topic.²}"
 	/>
 </c:forEach>

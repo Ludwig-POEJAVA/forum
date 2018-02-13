@@ -8,11 +8,17 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 public class ThreadFromList extends SimpleTagSupport
 {
-	String	titre;
-	int		vues;
-	int		reponses;
-	String	auteur;
-	Date	dateCreation;
+	String topicId;
+
+	String titre;
+
+	int vues;
+
+	int reponses;
+
+	String auteur;
+
+	Date dateCreation;
 
 	@Override
 	public void doTag() throws IOException
@@ -23,7 +29,7 @@ public class ThreadFromList extends SimpleTagSupport
 
 		s += "\t\t\t\t\t<tr>";
 		s += "\t\t\t\t\t\t<td class=\"row1\">";
-		s += "\t\t\t\t\t\t\t<a class=\"topictitle\" href=\"" + "#thread.lien.vers." + this.titre + "\">" + this.titre + "</a>";
+		s += "\t\t\t\t\t\t\t<a class=\"topictitle\" href=\"" + "/forum/viewTopic?topic=" + this.topicId + "\">" + this.titre + "</a>";
 		s += "\t\t\t\t\t\t</td>";
 		s += "\t\t\t\t\t\t<td align=\"center\" class=\"row2\" width=\"130\">";
 		s += "\t\t\t\t\t\t\t<p class=\"topicauthor\"><a class=\"username-coloured\" href=\"" + "#profil/id." + this.auteur + "\">" + this.auteur + "</a></p>";
@@ -62,5 +68,10 @@ public class ThreadFromList extends SimpleTagSupport
 	public void setDateCreation(Date dateCreation)
 	{
 		this.dateCreation = dateCreation;
+	}
+
+	public void setTopicId(String topicId)
+	{
+		this.topicId = topicId;
 	}
 }

@@ -27,13 +27,17 @@ public class ViewTopicServlet extends HttpServlet
 		HttpSession session = req.getSession();
 		System.out.println("VOIR TOPIC #" + 0);
 		String topic;
+		int topicInt;
 		try
 		{
 			topic = req.getParameter("topic");
+			topicInt = Integer.parseInt(topic);
+
 		}
-		finally
+		catch (Exception e)
 		{
-			//redirect to home;
+			//send to /home if no topic to display
+			resp.sendRedirect("/forum/home");
 		}
 		//session.setAttribute("topics", topics);
 
