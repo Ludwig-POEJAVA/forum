@@ -54,7 +54,7 @@
 			<tbody>
 				<tr>
 					<td class="row1">
-						<p class="breadcrumbs">Index du forum</p>
+						<p class="breadcrumbs"><a href="/forum/home">Board index</a></p>
 					</td>
 				</tr>
 			</tbody>
