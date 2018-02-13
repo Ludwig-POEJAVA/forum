@@ -7,8 +7,8 @@
 <c:forEach items="${posts}" var="post">
 	<custom:postsFromList
 		auteur = 		"${post.auteur.login}"
-		topicTitre = 	"${post.topic.titre}"
-		datePostage = 	"${post.datePostage}"
+		topicTitre = 	"${post.parent.titre}"
+		datePostage = 	"${post.dateCreation.toString()}"
 		message = 		"${post.vues}"
 	/>
 </c:forEach>

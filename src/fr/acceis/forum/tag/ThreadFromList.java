@@ -16,9 +16,9 @@ public class ThreadFromList extends SimpleTagSupport
 
 	int reponses;
 
-	String auteur;
-
 	Date dateCreation;
+
+	String auteur;
 
 	@Override
 	public void doTag() throws IOException
